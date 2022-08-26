@@ -1,4 +1,5 @@
 {
+  "homepage": "https://jadenfurtado.github.io/async-ecommerce", 
   "name": "async-ecommerce",
   "version": "0.1.0",
   "private": true,
@@ -31,9 +32,11 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build": "craco build && cp build/index.html build/404.html",
     "test": "craco test",
     "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "watch:css": "postcss src/styles/tailwind.css -o src/styles/output.css"
   },
   "eslintConfig": {
